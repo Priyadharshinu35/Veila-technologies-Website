@@ -51,6 +51,8 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   cursor: default;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-glow {
@@ -120,7 +122,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom:0;
+  flex-grow: 1;
+  align-content: flex-start; 
 }
 
 .service-features li {
@@ -187,3 +191,17 @@
   pointer-events: none;
 }
 .service-card:hover .card-border-glow { opacity: 1; }
+
+.service-pricing {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+.price-basic { color: var(--text-secondary); }
+.price-premium { color: #FF6A00; }
+.price-divider { color: var(--border-hover); }

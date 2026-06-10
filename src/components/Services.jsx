@@ -3,12 +3,12 @@ import { motion, useInView } from 'framer-motion';
 import './Services.css';
 
 const services = [
-  { icon: '🌐', title: 'Web Development', tag: 'Frontend & Backend', desc: 'We build fast, responsive, and visually stunning websites and web apps that drive conversions and deliver exceptional experiences.', features: ['Custom Websites', 'E-Commerce Stores', 'Landing Pages', 'Web Apps'] },
-  { icon: '💻', title: 'Software Development', tag: 'Custom Solutions', desc: 'Tailored software solutions designed for your specific business needs — scalable, secure, and built with cutting-edge tech.', features: ['Mobile Apps', 'SaaS Platforms', 'APIs & Integrations', 'Automation'] },
-  { icon: '📈', title: 'Digital Marketing', tag: 'Growth Strategy', desc: 'Data-driven digital marketing campaigns that grow your audience, increase brand awareness, and generate qualified leads.', features: ['PPC Campaigns', 'Email Marketing', 'Content Strategy', 'Analytics'] },
-  { icon: '🔍', title: 'SEO Optimization', tag: 'Search Rankings', desc: 'Boost your visibility on search engines with comprehensive SEO strategies that drive organic traffic and improve rankings.', features: ['On-page SEO', 'Technical SEO', 'Link Building', 'Keyword Research'] },
-  { icon: '📱', title: 'Social Media Management', tag: 'Brand Presence', desc: 'Build a powerful social media presence with strategic content, consistent engagement, and creative campaigns.', features: ['Content Creation', 'Community Management', 'Brand Strategy', 'Analytics'] },
-  { icon: '🎨', title: 'UI/UX Design', tag: 'Design & Branding', desc: 'Craft intuitive user interfaces and memorable brand experiences that captivate your audience and reflect your identity.', features: ['UI Design', 'UX Research', 'Brand Identity', 'Prototyping'] },
+  { icon: '🌐', title: 'Web Development', tag: 'Frontend & Backend', desc: 'We build fast, responsive, and visually stunning websites and web apps that drive conversions and deliver exceptional experiences.', features: ['Custom Websites', 'E-Commerce Stores', 'Landing Pages', 'Web Apps'],pricing: { basic: '₹8,000', premium: '₹18,000' }},
+  { icon: '💻', title: 'Software Development', tag: 'Custom Solutions', desc: 'Tailored software solutions designed for your specific business needs — scalable, secure, and built with cutting-edge tech.', features: ['Mobile Apps', 'SaaS Platforms', 'APIs & Integrations', 'Automation'], pricing: { basic: '₹15,000', premium: '₹40,000' } },
+  { icon: '📈', title: 'Digital Marketing', tag: 'Growth Strategy', desc: 'Data-driven digital marketing campaigns that grow your audience, increase brand awareness, and generate qualified leads.', features: ['PPC Campaigns', 'Email Marketing', 'Content Strategy', 'Analytics'] ,pricing: { basic: '₹5,000', premium: '₹12,000' }},
+  { icon: '🔍', title: 'SEO Optimization', tag: 'Search Rankings', desc: 'Boost your visibility on search engines with comprehensive SEO strategies that drive organic traffic and improve rankings.', features: ['On-page SEO', 'Technical SEO', 'Link Building', 'Keyword Research'],pricing: { basic: '₹2,500', premium: '₹4,000' } },
+  { icon: '📱', title: 'Social Media Management', tag: 'Brand Presence', desc: 'Build a powerful social media presence with strategic content, consistent engagement, and creative campaigns.', features: ['Content Creation', 'Community Management', 'Brand Strategy', 'Analytics'], pricing: { basic: '₹3,500', premium: '₹8,000' } },
+  { icon: '🎨', title: 'UI/UX Design', tag: 'Design & Branding', desc: 'Craft intuitive user interfaces and memorable brand experiences that captivate your audience and reflect your identity.', features: ['UI Design', 'UX Research', 'Brand Identity', 'Prototyping'],pricing: { basic: '₹6,000', premium: '₹14,000' }  },
 ];
 
 function TiltCard({ children, className }) {
@@ -74,7 +74,13 @@ export default function Services() {
                   {s.features.map((f) => (
                     <li key={f}><span className="feat-dot" />{f}</li>
                   ))}
+                  
                 </ul>
+                <div className="service-pricing">
+                  <span className="price-basic">Basic: {s.pricing.basic}</span>
+                  <span className="price-divider">|</span>
+                  <span className="price-premium">Premium: {s.pricing.premium}</span>
+                  </div>
                 <div className="card-border-glow" />
               </TiltCard>
             </motion.div>
