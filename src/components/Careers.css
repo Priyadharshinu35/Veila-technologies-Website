@@ -1,0 +1,163 @@
+.careers-section {
+  padding: 120px 0;
+}
+
+.careers-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.list-heading {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  transition: var(--transition);
+  cursor: default;
+  gap: 16px;
+}
+
+.job-role {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.job-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.job-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-teal);
+  background: rgba(0, 191, 165, 0.1);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-family: var(--font-display);
+}
+
+.job-dot {
+  width: 3px; height: 3px;
+  background: var(--text-muted);
+  border-radius: 50%;
+}
+
+.job-location {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.job-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-family: var(--font-display);
+}
+
+.apply-btn {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--border-hover);
+  color: var(--accent-cyan);
+  border-radius: 50px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.apply-btn:hover {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.perk-item {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  align-items: flex-start;
+}
+
+.perk-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+
+.perk-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.perk-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.careers-cta-box {
+  padding: 24px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.careers-cta-box p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .careers-layout { grid-template-columns: 1fr; }
+  .careers-section { padding: 80px 0; }
+  .perks-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+  .job-card { flex-direction: column; align-items: flex-start; }
+}

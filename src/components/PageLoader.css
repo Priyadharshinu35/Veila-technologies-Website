@@ -1,0 +1,35 @@
+.page-loader {
+  position: fixed; inset: 0; z-index: 99999;
+  background: var(--bg-primary);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 20px;
+  animation: loaderFade 0.5s ease 2s forwards;
+}
+@keyframes loaderFade { to { opacity: 0; pointer-events: none; visibility: hidden; } }
+.loader-logo {
+  width: 90px; height: 90px; object-fit: contain;
+  animation: loaderPop 0.8s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes loaderPop {
+  from { transform: scale(0) rotate(-20deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0);      opacity: 1; }
+}
+.loader-bar {
+  width: 180px; height: 2px;
+  background: rgba(255,106,0,0.15);
+  border-radius: 2px; overflow: hidden;
+}
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF6A00, #FF3D00);
+  border-radius: 2px;
+  animation: loaderFill 1.8s ease forwards;
+}
+@keyframes loaderFill { from { width: 0; } to { width: 100%; } }
+.loader-text {
+  font-family: var(--font-display);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--text-muted);
+}

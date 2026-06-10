@@ -1,0 +1,110 @@
+.why-section {
+  padding: 120px 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border) 30%, var(--border) 70%, transparent);
+}
+
+.why-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border) 30%, var(--border) 70%, transparent);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.why-desc {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  font-weight: 300;
+  margin-top: 16px;
+}
+
+.why-cta { margin-bottom: 40px; }
+
+.why-highlight {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.highlight-line {
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-teal));
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.why-highlight p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.reason-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: default;
+  transition: var(--transition);
+}
+
+.reason-item:first-child { padding-top: 0; }
+.reason-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.reason-num {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  margin-top: 2px;
+  min-width: 24px;
+}
+
+.reason-item:hover .reason-num { opacity: 1; }
+
+.reason-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.reason-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .why-grid { grid-template-columns: 1fr; gap: 48px; }
+  .why-section { padding: 80px 0; }
+}
