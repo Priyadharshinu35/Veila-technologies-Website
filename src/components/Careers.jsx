@@ -61,7 +61,7 @@ export default function Careers() {
                     ))}
                   </div>
                 </div>
-                <a href="mailto:veilatechnologies@gmail.com?subject=Application - ${job.role}" className="apply-btn">
+                <a href='mailto:veilatechnologies@gmail.com?subject=Application - ${job.role}' className="apply-btn">
                   Apply →
                 </a>
               </motion.div>
